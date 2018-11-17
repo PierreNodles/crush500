@@ -1,3 +1,9 @@
+/*** RESET CSS ***/
+body {
+  margin: 0;
+  padding: 0;
+}
+
 /**** FONT *****/
 @font-face {
   font-family: "VCR";
@@ -62,8 +68,32 @@
 /*****************************************
 CSS GENERIQUE
 ******************************************/
+.dp {
+  /***** GRID & RESPONSIVE ******/
+  /************************************
+  MAIN CSS
+  ************************************/
+  /***** NAV *****/
+  /***** JUMBOTRON *****/
+  /******* CRUSH 500 ********/
+  /****************************************
+  MOBILE CSS
+  *****************************************/
+  /****************************************
+  BIG SCREEN
+  *****************************************/
+}
+
+.dp * {
+  box-sizing: border-box;
+}
+
 .dp h1, .dp h2, .dp h3, .dp h4, .dp h5, .dp h6, .dp p {
   color: #434244;
+}
+
+.dp a {
+  text-decoration: none;
 }
 
 .dp .row {
@@ -72,6 +102,12 @@ CSS GENERIQUE
   padding-left: 5%;
   padding-right: 5%;
   margin-bottom: 120px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 .dp img {
@@ -84,6 +120,11 @@ CSS GENERIQUE
 
 .dp .container {
   max-width: 1000px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
 }
 
 .dp a {
@@ -135,16 +176,125 @@ CSS GENERIQUE
   margin-bottom: 30px;
 }
 
-/************************************
-MAIN CSS
-************************************/
-.dp {
-  /***** NAV *****/
-  /***** JUMBOTRON *****/
-  /******* CRUSH 500 ********/
-  /****************************************
-  MOBILE CSS
-  *****************************************/
+.dp .col {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.dp .col-1, .dp .col-2, .dp .col-3, .dp .col-4, .dp .col-5, .dp .col-6, .dp .col-7, .dp .col-8, .dp .col-9, .dp .col-10, .dp .col-11, .dp .col-12, .dp .col,
+.dp .col-auto, .dp .col-sm-1, .dp .col-sm-2, .dp .col-sm-3, .dp .col-sm-4, .dp .col-sm-5, .dp .col-sm-6, .dp .col-sm-7, .dp .col-sm-8, .dp .col-sm-9, .dp .col-sm-10, .dp .col-sm-11, .dp .col-sm-12, .dp .col-sm,
+.dp .col-sm-auto, .dp .col-md-1, .dp .col-md-2, .dp .col-md-3, .dp .col-md-4, .dp .col-md-5, .dp .col-md-6, .dp .col-md-7, .dp .col-md-8, .dp .col-md-9, .dp .col-md-10, .dp .col-md-11, .dp .col-md-12, .dp .col-md,
+.dp .col-md-auto, .dp .col-lg-1, .dp .col-lg-2, .dp .col-lg-3, .dp .col-lg-4, .dp .col-lg-5, .dp .col-lg-6, .dp .col-lg-7, .dp .col-lg-8, .dp .col-lg-9, .dp .col-lg-10, .dp .col-lg-11, .dp .col-lg-12, .dp .col-lg,
+.dp .col-lg-auto, .dp .col-xl-1, .dp .col-xl-2, .dp .col-xl-3, .dp .col-xl-4, .dp .col-xl-5, .dp .col-xl-6, .dp .col-xl-7, .dp .col-xl-8, .dp .col-xl-9, .dp .col-xl-10, .dp .col-xl-11, .dp .col-xl-12, .dp .col-xl,
+.dp .col-xl-auto {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+  .dp .col-md {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  .dp .col-md-auto {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+  }
+  .dp .col-md-1 {
+    -ms-flex: 0 0 8.333333%;
+    flex: 0 0 8.333333%;
+    max-width: 8.333333%;
+  }
+  .dp .col-md-2 {
+    -ms-flex: 0 0 16.666667%;
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+  }
+  .dp .col-md-3 {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .dp .col-md-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  .dp .col-md-5 {
+    -ms-flex: 0 0 41.666667%;
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+  }
+  .dp .col-md-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .dp .col-md-7 {
+    -ms-flex: 0 0 58.333333%;
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;
+  }
+  .dp .col-md-8 {
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+  }
+  .dp .col-md-9 {
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .dp .col-md-10 {
+    -ms-flex: 0 0 83.333333%;
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
+  }
+  .dp .col-md-11 {
+    -ms-flex: 0 0 91.666667%;
+    flex: 0 0 91.666667%;
+    max-width: 91.666667%;
+  }
+  .dp .col-md-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 576px) {
+  .dp .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .dp .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .dp .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .dp .container {
+    max-width: 1140px;
+  }
 }
 
 .dp nav {
@@ -218,14 +368,18 @@ MAIN CSS
 .dp #dp_motif-right::before {
   background-image: url(../img/motif-reverse.png);
   background-repeat: no-repeat;
+  background-position: left;
   content: " ";
   position: absolute;
-  height: 50px;
   bottom: 40%;
+  height: 50px;
   width: 837px;
   left: -40px;
   z-index: -1;
-  background-position: right;
+}
+
+.dp .row.motif-right {
+  overflow: hidden;
 }
 
 .dp .dp_scroll {
@@ -274,11 +428,11 @@ MAIN CSS
   }
 }
 
-/****************************************
-BIG SCREEN
-*****************************************/
 @media (min-width: 1550px) {
-  .dp_jumbotron .container.dp_cta-btn {
+  .dp .dp_jumbotron .container.dp_cta-btn {
     padding-right: 15%;
+  }
+  .dp .row.motif-right {
+    overflow: visible;
   }
 }
