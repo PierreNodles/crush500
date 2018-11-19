@@ -11,17 +11,17 @@ body {
 }
 
 @font-face {
-  font-family: "RobotCondensed";
+  font-family: "RobotoCondensed";
   src: url("../fonts/RobotoCondensed-Bold.woff") format("woff");
 }
 
 @font-face {
-  font-family: "RobotCondensed-Italic";
+  font-family: "RobotoCondensed-Italic";
   src: url("../fonts/RobotoCondensed-Italic.woff") format("woff");
 }
 
 @font-face {
-  font-family: "RobotCondensed-BoldItalic";
+  font-family: "RobotoCondensed-BoldItalic";
   src: url("../fonts/RobotoCondensed-BoldItalic.woff") format("woff");
 }
 
@@ -69,6 +69,7 @@ body {
 CSS GENERIQUE
 ******************************************/
 .dp {
+  overflow: hidden;
   /***** GRID & RESPONSIVE ******/
   /************************************
   MAIN CSS
@@ -76,12 +77,21 @@ CSS GENERIQUE
   /***** NAV *****/
   /***** JUMBOTRON *****/
   /******* CRUSH 500 ********/
+  /******* CONCEPTION  ********/
+  /******* VIDEO  ********/
+  /******* PARALLAX  ********/
+  /*********** LA GAMME ******************/
   /****************************************
   MOBILE CSS
   *****************************************/
   /****************************************
+  IPAD
+  *****************************************/
+  /****************************************
   BIG SCREEN
   *****************************************/
+  /******* ANIMATION JQUERY ************/
+  /***** MOBILE // Animation Jquery *****/
 }
 
 .dp * {
@@ -90,6 +100,10 @@ CSS GENERIQUE
 
 .dp h1, .dp h2, .dp h3, .dp h4, .dp h5, .dp h6, .dp p {
   color: #434244;
+}
+
+.dp h1, .dp h2, .dp h3, .dp h4, .dp h5, .dp h6 {
+  text-transform: uppercase;
 }
 
 .dp a {
@@ -101,7 +115,6 @@ CSS GENERIQUE
   margin-left: 0 !important;
   padding-left: 5%;
   padding-right: 5%;
-  margin-bottom: 120px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -133,7 +146,7 @@ CSS GENERIQUE
   color: #333333;
   text-transform: uppercase;
   font-weight: 700;
-  font-family: "RobotCondensed", sans-serif;
+  font-family: "RobotoCondensed", sans-serif;
   position: relative;
   font-size: 14px;
 }
@@ -157,22 +170,29 @@ CSS GENERIQUE
 
 .dp h2 {
   font-size: 4em;
-  font-family: "RobotCondensed-BoldItalic";
+  font-family: "RobotoCondensed-BoldItalic";
   margin-bottom: 40px;
 }
 
 .dp h2 span {
-  font-family: "RobotCondensed-Italic";
+  font-family: "RobotoCondensed-Italic";
 }
 
 .dp h3 {
-  margin-bottom: 30px;
   text-transform: uppercase;
-  font-family: "RobotCondensed-BoldItalic";
+  font-family: "RobotoCondensed-BoldItalic";
+}
+
+.dp h4 {
+  margin-bottom: 20px;
+  margin-top: 5px;
+  text-transform: uppercase;
+  font-family: "RobotoCondensed-BoldItalic";
+  font-size: 28px;
 }
 
 .dp p {
-  font-family: "RobotCondensed-Italic";
+  font-family: "RobotoCondensed-Italic";
   margin-bottom: 30px;
 }
 
@@ -293,7 +313,7 @@ CSS GENERIQUE
 
 @media (min-width: 1200px) {
   .dp .container {
-    max-width: 1140px;
+    max-width: 1000px;
   }
 }
 
@@ -352,6 +372,22 @@ CSS GENERIQUE
   padding-right: 25%;
 }
 
+.dp .dp_crush500 .row {
+  margin-bottom: 120px;
+}
+
+.dp .dp_crush500 figure.crush500_2 img {
+  position: absolute;
+  top: 50%;
+  left: 33%;
+}
+
+.dp .dp_crush500 figure.crush500_3 img {
+  position: absolute;
+  top: -35%;
+  left: -40%;
+}
+
 .dp #dp_motif-left::before {
   background-image: url(../img/motif.png);
   background-repeat: no-repeat;
@@ -361,7 +397,7 @@ CSS GENERIQUE
   height: 50px;
   top: 25%;
   width: 837px;
-  right: 15px;
+  right: 20px;
   z-index: -1;
 }
 
@@ -371,15 +407,11 @@ CSS GENERIQUE
   background-position: left;
   content: " ";
   position: absolute;
-  bottom: 40%;
+  bottom: 50%;
   height: 50px;
   width: 837px;
-  left: -40px;
+  left: -55px;
   z-index: -1;
-}
-
-.dp .row.motif-right {
-  overflow: hidden;
 }
 
 .dp .dp_scroll {
@@ -399,13 +431,223 @@ CSS GENERIQUE
 .dp .dp_link-row {
   display: flex;
   justify-content: center;
+  text-align: center;
+}
+
+.dp .vertical-img img {
+  height: 100%;
+  width: 100%;
+}
+
+@media (min-width: 767.98px) {
+  .dp .vertical-img {
+    margin-top: 12.5%;
+    z-index: 1;
+  }
+  .dp .vertical-img figure {
+    display: flex;
+  }
+  .dp .conception-img {
+    display: flex;
+    flex-direction: column;
+  }
+  .dp .conception-img img {
+    max-width: 150%;
+    float: right;
+    z-index: -1;
+  }
+  .dp .conception-img h3 {
+    margin: -60px 0px 0px -30px;
+    width: 75%;
+    padding: 10px 5px 10px 30px !important;
+    background-color: white;
+    font-size: 1.7rem;
+  }
+  .dp .conception-img p {
+    max-width: 80%;
+  }
+}
+
+.dp .conception-img::before {
+  background-image: url(../img/motif-reverse.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  content: " ";
+  position: absolute;
+  bottom: 17%;
+  height: 50px;
+  width: 837px;
+  right: -150%;
+  z-index: 3;
+}
+
+.dp .dp_video h2 {
+  text-align: right;
+}
+
+.dp .video {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.dp .video figure {
+  overflow: hidden;
+  position: absolute;
+  z-index: 3;
+  right: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.dp .video figure img {
+  width: 100%;
+}
+
+.dp .video figure .fas {
+  color: white;
+  font-size: 135px;
+  position: absolute;
+  left: 45%;
+  top: 40%;
+  z-index: 10;
+}
+
+.dp .video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.dp .parallax {
+  max-width: 100%;
+  /* The image used */
+  background-image: url("../img/parralax-background.jpg");
+  /* Set a specific height */
+  height: 800px;
+  margin-top: 120px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.dp .crush500 a {
+  padding: 10px 25px 10px 15px;
+  background-color: #ffea28;
+  color: #333333;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "RobotoCondensed", sans-serif;
+  position: relative;
+  font-size: 12px;
+}
+
+.dp .crush500 .product-price {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.dp .crush500 .product-price span {
+  text-align: center;
+  font-family: "RobotoCondensed", sans-serif;
+  font-size: 38px;
+  padding: 6px 30px 10px;
+  background-color: #ffea28;
+}
+
+.dp .products {
+  display: flex;
+}
+
+@media (min-width: 980px) {
+  .dp {
+    /**** END DESKTOP ****/
+  }
+  .dp .products img {
+    max-width: 170%;
+  }
+  .dp .products #ad_black {
+    z-index: 5;
+  }
+  .dp .products #ad_kaki {
+    z-index: 4;
+  }
+  .dp .products #jr_black {
+    z-index: 3;
+  }
+  .dp .products #jr_kaki {
+    z-index: 2;
+  }
+  .dp .products .even img {
+    margin-left: -30%;
+  }
+  .dp .crush500 .single-product .product-cta {
+    text-align: right;
+  }
+}
+
+.dp .single-product {
+  margin-bottom: 40px;
+}
+
+.dp .single-product.even .product-label {
+  position: absolute;
+  right: 0px;
+  top: 15%;
+}
+
+.dp .single-product.odd .product-label {
+  position: absolute;
+  left: 0px;
+  top: 5%;
+}
+
+.dp .single-product figure {
+  margin-top: 52px;
+}
+
+.dp .single-product.odd .product-label span {
+  text-align: left;
+}
+
+.dp .single-product.even .product-label span {
+  text-align: right;
+}
+
+.dp .single-product .product-label span {
+  font-family: "RobotoCondensed", sans-serif;
+  text-transform: uppercase;
+  display: block;
+  font-size: 20px;
+}
+
+.dp .single-product .product-label span.product-description {
+  font-family: "RobotoCondensed-Italic", sans-serif;
+}
+
+.dp .single-product .product-cta {
+  text-align: center;
+}
+
+.dp .dp_gamme figure {
+  margin-bottom: 25px;
 }
 
 @media (max-width: 767.98px) {
   .dp {
     /**** GENERIQUE ****/
     /****** JUMBOTRON ******/
-    /******** CRUSH500 *************/
+    /******** CRUSH500 RESPONSIVE *************/
+    /******* CONCEPTION RESPONSIVE ********/
+    /*********** VIDEO RESPONSIVE *******/
+    /************* LA GAMME RESPONSIVE  ****************/
   }
   .dp h2 {
     font-size: 3.5em;
@@ -426,13 +668,100 @@ CSS GENERIQUE
   .dp #dp_motif-right::before {
     left: 15px;
   }
+  .dp .dp_link-row {
+    text-align: left;
+  }
+  .dp .conception-img::before {
+    right: 0;
+    bottom: 30%;
+    z-index: -3;
+  }
+  .dp .video figure .fas {
+    font-size: 55px;
+    left: 45%;
+    top: 35%;
+  }
+  .dp .products {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 75px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .dp {
+    /********** CRUSH 500 ************/
+    /****** CONCEPTION ******/
+    /******* LA GAMME ******/
+  }
+  .dp #dp_motif-right::before {
+    left: 0;
+  }
+  .dp .conception-img h3 {
+    width: 100%;
+  }
+  .dp .conception-img::before {
+    position: absolute;
+    bottom: -30px;
+    width: 837px;
+    height: 50px;
+    z-index: -1;
+  }
+  .dp .single-product .product-label span {
+    font-size: 15px;
+  }
+  .dp .crush500 a {
+    font-size: 8px;
+  }
+  .dp .products img {
+    max-width: 170%;
+  }
+  .dp .products #ad_black {
+    z-index: 5;
+  }
+  .dp .products #ad_kaki {
+    z-index: 4;
+  }
+  .dp .products #jr_black {
+    z-index: 3;
+  }
+  .dp .products #jr_kaki {
+    z-index: 2;
+  }
+  .dp .products .even img {
+    margin-left: -30%;
+  }
+  .dp .crush500 .single-product .product-cta {
+    text-align: right;
+  }
 }
 
 @media (min-width: 1550px) {
   .dp .dp_jumbotron .container.dp_cta-btn {
     padding-right: 15%;
   }
-  .dp .row.motif-right {
-    overflow: visible;
+}
+
+.dp #dp_motif-right, .dp .crush500-text_2, .dp .dp_link-row, .dp .crush500_2, .dp .crush500_3, .dp .crush500_4 {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  .dp .dp_crush500 .row {
+    flex-direction: column-reverse;
+  }
+  .dp .dp_crush500 figure.crush500_2 img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+  }
+  .dp .dp_crush500 figure.crush500_3 img {
+    position: absolute;
+    top: -35%;
+    left: 0;
+  }
+  .dp .dp_link-row a {
+    position: absolute;
+    bottom: -800px;
   }
 }

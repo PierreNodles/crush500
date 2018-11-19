@@ -13,17 +13,17 @@ body {
 }
 
 @font-face {
-  font-family: "RobotCondensed";
+  font-family: "RobotoCondensed";
   src: url("../fonts/RobotoCondensed-Bold.woff") format("woff");
 }
 
 @font-face {
-  font-family: "RobotCondensed-Italic";
+  font-family: "RobotoCondensed-Italic";
   src: url("../fonts/RobotoCondensed-Italic.woff") format("woff");
 }
 
 @font-face {
-  font-family: "RobotCondensed-BoldItalic";
+  font-family: "RobotoCondensed-BoldItalic";
   src: url("../fonts/RobotoCondensed-BoldItalic.woff") format("woff");
 }
 
@@ -76,6 +76,8 @@ CSS GENERIQUE
 ******************************************/
 .dp {
 
+  overflow:hidden;
+
 
   * {
     box-sizing: border-box;
@@ -85,6 +87,11 @@ CSS GENERIQUE
     color : #434244;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+  }
+
+
   a {
     text-decoration: none;
   }
@@ -93,7 +100,6 @@ CSS GENERIQUE
     margin-left:0 !important;
     padding-left: 5%;
     padding-right: 5%;
-    margin-bottom: 120px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -125,7 +131,7 @@ CSS GENERIQUE
     color: #333333;
     text-transform: uppercase;
     font-weight: 700;
-    font-family: "RobotCondensed", sans-serif;
+    font-family: "RobotoCondensed", sans-serif;
     position:relative;
     font-size:14px;
   }
@@ -148,23 +154,30 @@ CSS GENERIQUE
 
   h2 {
     font-size : 4em;
-    font-family : "RobotCondensed-BoldItalic";
+    font-family : "RobotoCondensed-BoldItalic";
     margin-bottom:40px;
   }
 
   h2 span {
 
-    font-family : "RobotCondensed-Italic";
+    font-family : "RobotoCondensed-Italic";
   }
 
   h3 {
-    margin-bottom:30px;
     text-transform : uppercase;
-    font-family : "RobotCondensed-BoldItalic";
+    font-family : "RobotoCondensed-BoldItalic";
+  }
+
+  h4 {
+    margin-bottom:20px;
+    margin-top:5px;
+    text-transform : uppercase;
+    font-family : "RobotoCondensed-BoldItalic";
+    font-size:28px;
   }
 
   p {
-    font-family : "RobotCondensed-Italic";
+    font-family : "RobotoCondensed-Italic";
     margin-bottom:30px;
   }
 
@@ -290,12 +303,9 @@ CSS GENERIQUE
 
   @media (min-width: 1200px) {
     .container {
-      max-width: 1140px;
+      max-width: 1000px;
     }
   }
-
-
-
 
 
 
@@ -304,6 +314,8 @@ CSS GENERIQUE
   ************************************/
 
   /***** NAV *****/
+
+
   nav {
     height : 115px !important;
     background-color : black;
@@ -368,6 +380,22 @@ CSS GENERIQUE
 
   /******* CRUSH 500 ********/
 
+  .dp_crush500 .row {
+    margin-bottom: 120px;
+  }
+
+  .dp_crush500 figure.crush500_2 img {
+    position: absolute;
+    top: 50%;
+    left: 33%;
+  }
+
+  .dp_crush500 figure.crush500_3 img {
+    position: absolute;
+    top: -35%;
+    left: -40%;
+  }
+
   #dp_motif-left::before {
     background-image: url(../img/motif.png);
     background-repeat: no-repeat;
@@ -377,7 +405,7 @@ CSS GENERIQUE
     height: 50px;
     top:25%;
     width: 837px;
-    right: 15px;
+    right: 20px;
     z-index: -1;
   }
 
@@ -385,19 +413,15 @@ CSS GENERIQUE
     background-image: url(../img/motif-reverse.png);
     background-repeat: no-repeat;
     background-position: left;
-    content : " ";
+    content: " ";
     position: absolute;
-    bottom:40%;
+    bottom: 50%;
     height: 50px;
     width: 837px;
-    left: -40px;
+    left: -55px;
     z-index: -1;
-
   }
 
-  .row.motif-right {
-    overflow:hidden;
-  }
 
   p.dp_description {
   }
@@ -417,20 +441,237 @@ CSS GENERIQUE
   .dp_link-row {
     display:flex;
     justify-content:center;
+    text-align: center;
   }
 
 
+  /******* CONCEPTION  ********/
+
+  .vertical-img img {
+    height:100%;
+    width:100%;
+  }
+  @media (min-width: 767.98px) {
+    .vertical-img {
+      margin-top:12.5%;
+      z-index:1;
+    }
+
+    .vertical-img figure {
+      display:flex;
+    }
+
+    .conception-img {
+      display:flex;
+      flex-direction: column;
+    }
+
+    .conception-img img {
+      max-width: 150%;
+      float: right;
+      z-index: -1;
+    }
+
+    .conception-img h3 {
+      margin: -60px 0px 0px -30px;
+      width: 75%;
+      padding: 10px 5px 10px 30px !important;
+      background-color: white;
+      font-size: 1.7rem;
+    }
+
+    .conception-img p {
+      max-width:80%;
+    }
+
+  }
+
+  .conception-img::before {
+    background-image: url(../img/motif-reverse.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    content : " ";
+    position: absolute;
+    bottom:17%;
+    height: 50px;
+    width: 837px;
+    right: -150%;
+    z-index: 3;
+  }
 
 
+  /******* VIDEO  ********/
 
+  .dp_video h2 {
+    text-align:right;
+  }
+
+  .video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+  }
+  .video figure {
+    overflow: hidden;
+    position: absolute;
+    z-index: 3;
+    right: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .video figure img {
+    width:100%;
+  }
+
+  .video figure .fas {
+    color: white;
+    font-size: 135px;
+    position: absolute;
+    left: 45%;
+    top: 40%;
+    z-index:10
+
+  }
+
+  .video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /******* PARALLAX  ********/
+
+
+  .parallax {
+    max-width:100%;
+    /* The image used */
+    background-image: url("../img/parralax-background.jpg");
+
+    /* Set a specific height */
+    height: 800px;
+    margin-top:120px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+  /*********** LA GAMME ******************/
+
+  .crush500 a {
+    padding: 10px 25px 10px 15px;
+    background-color: #ffea28;
+    color: #333333;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: "RobotoCondensed", sans-serif;
+    position: relative;
+    font-size: 12px;
+  }
+
+  .crush500 .product-price {
+    text-align:center;
+    margin-bottom: 40px;
+  }
+
+  .crush500 .product-price span {
+    text-align:center;
+    font-family: "RobotoCondensed", sans-serif;
+    font-size:38px;
+    padding : 6px 30px 10px;
+    background-color : #ffea28;
+  }
+
+  .products {
+    display:flex;
+  }
+
+  @media (min-width:980px) {
+
+    .products img {
+      max-width:170%;
+    }
+    .products #ad_black {
+      z-index:5;
+    }
+    .products #ad_kaki {
+      z-index:4;
+    }
+
+    .products #jr_black {
+      z-index:3;
+    }
+    .products #jr_kaki {
+      z-index:2;
+    }
+    .products .even img {
+      margin-left:-30%;
+    }
+
+    .crush500 .single-product .product-cta {
+      text-align:right;
+    }
+
+
+    /**** END DESKTOP ****/
+  }
+
+  .single-product {
+    margin-bottom:40px;
+  }
+
+  .single-product.even .product-label {
+    position:absolute;
+    right:0px;
+    top:15%;
+  }
+
+  .single-product.odd .product-label {
+    position:absolute;
+    left:0px;
+    top:5%;
+  }
+
+  .single-product figure {
+    margin-top:52px;
+  }
+  .single-product.odd .product-label span {
+    text-align:left;
+  }
+
+  .single-product.even .product-label span {
+    text-align:right;
+  }
+
+  .single-product .product-label span {
+    font-family: "RobotoCondensed", sans-serif;
+    text-transform:uppercase;
+    display:block;
+    font-size:20px;
+  }
+
+  .single-product .product-label span.product-description {
+    font-family: "RobotoCondensed-Italic", sans-serif;
+  }
+  .single-product .product-cta {
+    text-align:center;
+  }
+  .dp_gamme figure {
+    margin-bottom: 25px;
+  }
 
 
   /****************************************
   MOBILE CSS
   *****************************************/
-
-
-
 
 
   @media (max-width: 767.98px) {
@@ -458,16 +699,107 @@ CSS GENERIQUE
     }
 
 
-    /******** CRUSH500 *************/
+    /******** CRUSH500 RESPONSIVE *************/
 
     #dp_motif-right::before {
       left: 15px;
+    }
+
+    .dp_link-row {
+      text-align:left;
+    }
+
+    /******* CONCEPTION RESPONSIVE ********/
+
+    .conception-img::before {
+      right: 0;
+      bottom: 30%;
+      z-index: -3;
+    }
+
+    /*********** VIDEO RESPONSIVE *******/
+
+    .video figure .fas {
+      font-size: 55px;
+      left: 45%;
+      top: 35%;
+    }
+
+    /************* LA GAMME RESPONSIVE  ****************/
+
+    .products {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 75px;
     }
 
 
   }
 
 
+
+  /****************************************
+  IPAD
+  *****************************************/
+
+  @media only screen and (min-width : 768px) and (max-width : 1024px) {
+
+
+    /********** CRUSH 500 ************/
+
+    #dp_motif-right::before {
+      left: 0;
+    }
+    /****** CONCEPTION ******/
+
+    .conception-img h3 {
+      width: 100%;
+
+    }
+
+    .conception-img::before {
+      position: absolute;
+      bottom: -30px;
+      width: 837px;
+      height: 50px;
+      z-index: -1;
+    }
+    /******* LA GAMME ******/
+
+    .single-product .product-label span {
+      font-size: 15px;
+    }
+
+    .crush500 a {
+      font-size: 8px;
+    }
+
+    .products img {
+      max-width:170%;
+    }
+    .products #ad_black {
+      z-index:5;
+    }
+    .products #ad_kaki {
+      z-index:4;
+    }
+
+    .products #jr_black {
+      z-index:3;
+    }
+    .products #jr_kaki {
+      z-index:2;
+    }
+    .products .even img {
+      margin-left:-30%;
+    }
+
+    .crush500 .single-product .product-cta {
+      text-align:right;
+    }
+
+
+  }
 
   /****************************************
   BIG SCREEN
@@ -479,9 +811,41 @@ CSS GENERIQUE
       padding-right: 15%;
     }
 
-    .row.motif-right {
-      overflow:visible;
-    }
   }
+
+
+
+
+  /******* ANIMATION JQUERY ************/
+
+  #dp_motif-right, .crush500-text_2, .dp_link-row, .crush500_2, .crush500_3, .crush500_4 {
+    display : none;
+  }
+
+  /***** MOBILE // Animation Jquery *****/
+  @media (max-width: 767.98px) {
+
+    .dp_crush500 .row {
+      flex-direction: column-reverse;
+    }
+
+    .dp_crush500 figure.crush500_2 img {
+      position: absolute;
+      top: 50%;
+      left:0;
+    }
+
+    .dp_crush500 figure.crush500_3 img {
+      position: absolute;
+      top: -35%;
+      left:0;
+    }
+
+    .dp_link-row a {
+    position: absolute;
+    bottom: -800px;
+}
+  }
+
 
 }
