@@ -17,6 +17,17 @@ $(function() {
     setHeight();
   });
 
+  function backgroundHeight() {
+    var bH = $(document).height();
+    console.log(bH);
+    $('#dp_background').css('min-height', bH);;
+  }
+
+  backgroundHeight();
+  $(window).resize(function() {
+    backgroundHeight();
+  });
+
   // Autoplay video on click
   $('#play-video, .video figure .fas').on('click', function(ev) {
     $(this).parent().fadeOut();
@@ -236,5 +247,5 @@ $(function() {
 
 
 
-// END JQUERY
+  // END JQUERY
 });

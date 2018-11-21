@@ -58,9 +58,18 @@ body {
 /*****************************************
 CSS GENERIQUE
 ******************************************/
+#dp_background {
+  width: 100%;
+  background-image: url(../img/page_background.jpg);
+  position: absolute;
+  top: 0px;
+  background-size: contain;
+  z-index: -999;
+}
+
 .dp {
   overflow: hidden;
-  background-image: url("../img/page_background.png");
+  background-size: contain;
   /***** GRID & RESPONSIVE ******/
   /************************************
   MAIN CSS
@@ -331,7 +340,7 @@ CSS GENERIQUE
 }
 
 .dp .dp_jumbotron {
-  background-image: url("../img/home-background_desktop.jpg");
+  background-image: url("../img/home-background_desktop.png");
   background-position: bottom;
   background-repeat: no-repeat;
   display: flex;
@@ -342,19 +351,19 @@ CSS GENERIQUE
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .dp .dp_jumbotron {
-    background-image: url("../img/home-background.jpg");
+    background-image: url("../img/home-background.png");
   }
 }
 
 @media (min-width: 1550px) {
   .dp .dp_jumbotron {
-    background-image: url("../img/home-background.jpg");
+    background-image: url("../img/home-background.png");
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .dp .dp_jumbotron {
-    background-image: url("../img/home-background_mobile.jpg");
+    background-image: url("../img/home-background_mobile.png");
   }
 }
 
