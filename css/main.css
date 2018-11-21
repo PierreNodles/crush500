@@ -331,13 +331,31 @@ CSS GENERIQUE
 }
 
 .dp .dp_jumbotron {
-  background-image: url("../img/home-background.jpg");
+  background-image: url("../img/home-background_desktop.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 0px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .dp .dp_jumbotron {
+    background-image: url("../img/home-background.jpg");
+  }
+}
+
+@media (min-width: 1550px) {
+  .dp .dp_jumbotron {
+    background-image: url("../img/home-background.jpg");
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .dp .dp_jumbotron {
+    background-image: url("../img/home-background_mobile.jpg");
+  }
 }
 
 .dp .dp_container-jumbo {
@@ -413,10 +431,6 @@ CSS GENERIQUE
   width: 837px;
   left: -55px;
   z-index: -1;
-}
-
-.dp p.dp_description {
-  max-width: 320px;
 }
 
 .dp .dp_scroll {

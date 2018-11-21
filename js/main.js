@@ -9,7 +9,7 @@ $(function() {
 
   // Jumbotro full Height
   function setHeight() {
-    windowHeight = $(window).innerHeight() * 1.1;
+    windowHeight = $(window).innerHeight();
     $('.dp_jumbotron').css('min-height', windowHeight);
   };
   setHeight();
