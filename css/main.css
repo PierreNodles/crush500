@@ -12,17 +12,7 @@ body {
 
 @font-face {
   font-family: "RobotoCondensed";
-  src: url("../fonts/RobotoCondensed-Bold.woff") format("woff");
-}
-
-@font-face {
-  font-family: "RobotoCondensed-Italic";
-  src: url("../fonts/RobotoCondensed-Italic.woff") format("woff");
-}
-
-@font-face {
-  font-family: "RobotoCondensed-BoldItalic";
-  src: url("../fonts/RobotoCondensed-BoldItalic.woff") format("woff");
+  src: url("../fonts/RobotoCondensed-Regular.woff") format("woff");
 }
 
 /****** ANIMATION *****/
@@ -70,6 +60,7 @@ CSS GENERIQUE
 ******************************************/
 .dp {
   overflow: hidden;
+  background-image: url("../img/page_background.png");
   /***** GRID & RESPONSIVE ******/
   /************************************
   MAIN CSS
@@ -170,29 +161,38 @@ CSS GENERIQUE
 
 .dp h2 {
   font-size: 4em;
-  font-family: "RobotoCondensed-BoldItalic";
+  font-family: 'RobotoCondensed';
+  font-weight: 700;
+  font-style: italic;
   margin-bottom: 40px;
 }
 
 .dp h2 span {
-  font-family: "RobotoCondensed-Italic";
+  font-family: "RobotoCondensed";
+  font-style: italic;
+  font-weight: 400;
 }
 
 .dp h3 {
   text-transform: uppercase;
-  font-family: "RobotoCondensed-BoldItalic";
+  font-family: 'RobotoCondensed';
+  font-weight: 700;
+  font-style: italic;
 }
 
 .dp h4 {
   margin-bottom: 20px;
   margin-top: 5px;
   text-transform: uppercase;
-  font-family: "RobotoCondensed-BoldItalic";
+  font-family: 'RobotoCondensed';
+  font-weight: 700;
+  font-style: italic;
   font-size: 28px;
 }
 
 .dp p {
-  font-family: "RobotoCondensed-Italic";
+  font-family: "RobotoCondensed";
+  font-style: italic;
   margin-bottom: 30px;
 }
 
@@ -333,6 +333,7 @@ CSS GENERIQUE
 .dp .dp_jumbotron {
   background-image: url("../img/home-background.jpg");
   background-position: bottom;
+  background-repeat: no-repeat;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -414,8 +415,13 @@ CSS GENERIQUE
   z-index: -1;
 }
 
+.dp p.dp_description {
+  max-width: 320px;
+}
+
 .dp .dp_scroll {
   text-align: center;
+  padding-right: 25%;
 }
 
 .dp .dp_scroll p {
@@ -504,7 +510,9 @@ CSS GENERIQUE
 }
 
 .dp .video figure img {
-  width: 100%;
+  height: 100%;
+  width: auto;
+  max-width: 120%;
 }
 
 .dp .video figure .fas {
@@ -557,6 +565,7 @@ CSS GENERIQUE
 .dp .crush500 .product-price span {
   text-align: center;
   font-family: "RobotoCondensed", sans-serif;
+  font-weight: 700;
   font-size: 38px;
   padding: 6px 30px 10px;
   background-color: #ffea28;
@@ -624,12 +633,15 @@ CSS GENERIQUE
 .dp .single-product .product-label span {
   font-family: "RobotoCondensed", sans-serif;
   text-transform: uppercase;
+  font-weight: 700;
   display: block;
   font-size: 20px;
 }
 
 .dp .single-product .product-label span.product-description {
-  font-family: "RobotoCondensed-Italic", sans-serif;
+  font-family: "RobotoCondensed";
+  font-weight: 400;
+  font-style: italic;
 }
 
 .dp .single-product .product-cta {
@@ -646,6 +658,7 @@ CSS GENERIQUE
     /****** JUMBOTRON ******/
     /******** CRUSH500 RESPONSIVE *************/
     /******* CONCEPTION RESPONSIVE ********/
+    /************ PARALLAX RESPONSIVE ******/
     /*********** VIDEO RESPONSIVE *******/
     /************* LA GAMME RESPONSIVE  ****************/
   }
@@ -675,6 +688,9 @@ CSS GENERIQUE
     right: 0;
     bottom: 30%;
     z-index: -3;
+  }
+  .dp .parallax {
+    background-position: right 40% center;
   }
   .dp .video figure .fas {
     font-size: 55px;
@@ -742,22 +758,25 @@ CSS GENERIQUE
   }
 }
 
-.dp #dp_motif-right, .dp .crush500-text_2, .dp .dp_link-row, .dp .crush500_2, .dp .crush500_3, .dp .crush500_4 {
+.dp #dp_motif-right, .dp .crush500-text_2, .dp .dp_link-row, .dp .crush500_2, .dp .crush500_3 {
   display: none;
 }
 
 @media (max-width: 767.98px) {
+  .dp .motif-right {
+    margin-top: 500px;
+  }
   .dp .dp_crush500 .row {
     flex-direction: column-reverse;
   }
   .dp .dp_crush500 figure.crush500_2 img {
     position: absolute;
-    top: 50%;
+    top: 85%;
     left: 0;
   }
   .dp .dp_crush500 figure.crush500_3 img {
     position: absolute;
-    top: -35%;
+    top: -80%;
     left: 0;
   }
   .dp .dp_link-row a {
