@@ -75,6 +75,51 @@ CSS GENERIQUE
     background-size: contain;
     z-index: -999;
 }
+
+#dp_background:before {
+    content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+  background-image: linear-gradient(to bottom, white, white 10%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0));
+  }
+
+// IPAD
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+  #dp_background:before {
+    background-image: linear-gradient(to bottom, white, white 10%, rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, 0)) !important;
+
+  }
+}
+// Big screen
+@media (min-width: 1550px) {
+  #dp_background {
+      background-size: cover;
+  }
+
+  #dp_background:before {
+    background-image: linear-gradient(to bottom, white, white 10%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0)) !important;
+
+  }
+
+
+}
+
+// Mobile
+@media only screen and (max-width : 767px) {
+  #dp_background {
+        background-size: cover;
+  }
+
+  #dp_background:before {
+    background-image: linear-gradient(to bottom, white, white 10%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0)) !important;
+  }
+
+}
+
+
 .dp {
 
   overflow:hidden;
@@ -348,7 +393,7 @@ CSS GENERIQUE
 
 
   .dp_jumbotron {
-    background-image: url('../img/home-background_desktop.png');
+    background-image: url('../img/home-background_desktop.jpg');
     background-position: bottom;
     background-repeat: no-repeat;
     display:flex;
@@ -360,23 +405,35 @@ CSS GENERIQUE
   // IPAD
   @media only screen and (min-width : 768px) and (max-width : 1024px) {
     .dp_jumbotron {
-      background-image: url('../img/home-background.png');
+      background-image: url('../img/home-background.jpg');
+      background-position: center;
     }
   }
   // Big screen
   @media (min-width: 1550px) {
     .dp_jumbotron {
-      background-image: url('../img/home-background.png');
+      background-image: url('../img/home-background.jpg');
     }
   }
 
   // Mobile
-  @media only screen and (max-width : 767px) {
+  @media only screen and (max-width : 767px)  {
     .dp_jumbotron {
-      background-image: url('../img/home-background_mobile.png');
+      background-image: url('../img/home-background_mobile2.jpg');
     }
 
   }
+
+  @media only screen and (max-height : 600px)  {
+    .dp_jumbotron {
+      background-image: url('../img/home-background_mobile-small.jpg');
+    }
+
+  }
+
+
+
+
 
 
   .dp_container-jumbo {
@@ -899,7 +956,7 @@ CSS GENERIQUE
 
     .dp_link-row a {
       position: absolute;
-      bottom: -800px;
+      bottom: -900px;
     }
   }
 
